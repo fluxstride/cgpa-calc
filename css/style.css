@@ -1,0 +1,242 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --text-light: #b9c8da;
+  --text-primary: #192e59;
+  --bg-gray: #e5eaf7;
+  font-family: Inter;
+  font-size: 10px;
+}
+
+img {
+  pointer-events: none;
+}
+
+main {
+  padding-inline: 1.2rem;
+}
+
+header {
+  background-image: url("../img/background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: min(100%, 400px);
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  color: var(--text-primary);
+  font-size: 3.6rem;
+  margin-top: 3rem;
+}
+
+.plan {
+  background-color: var(--bg-gray);
+  width: fit-content;
+  font-size: 1.8rem;
+  padding: 1rem 7rem;
+  border-radius: 10rem;
+  margin: 1.6rem auto;
+}
+
+.mth-412 {
+  width: fit-content;
+  margin-left: auto;
+}
+
+.courses {
+  margin: 0 auto;
+  width: min(100%, 600px);
+
+  .emptyState {
+    > img {
+      display: block;
+      margin: 6rem auto 2rem;
+    }
+
+    > p {
+      text-align: center;
+      font-size: 1.6rem;
+      color: var(--text-light);
+    }
+  }
+
+  .courseList {
+    margin-top: 6rem;
+    display: none;
+
+    .heading {
+      background: unset;
+
+      & span {
+        color: var(--text-light);
+      }
+    }
+  }
+
+  .course-row,
+  .heading {
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-gray);
+    padding: 2rem 2rem;
+    border-radius: 1.6rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+
+    > span:nth-of-type(1),
+    > span:nth-of-type(2) {
+      width: 45%;
+    }
+
+    > span:nth-of-type(3) {
+      width: 10%;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: unset;
+    }
+  }
+}
+
+.addCourseBtn {
+  background-color: #ebb03e;
+  border: none;
+  color: #ffff;
+  padding: 1.4rem 3rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+
+  > img {
+    width: 1.6rem;
+  }
+}
+
+.calculateGPABtn {
+  background-color: #3db165;
+  border: none;
+  color: #ffff;
+  padding: 1.4rem 3rem;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+
+  &:disabled {
+    background-color: #d8efe0;
+  }
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 5rem auto;
+  width: fit-content;
+
+  @media screen and (min-width: 425px) {
+    flex-direction: row;
+  }
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  visibility: hidden;
+  pointer-events: none;
+
+  .modal {
+    background-color: #ffffff;
+    width: min(100%, 400px);
+    padding: 2rem;
+    border-radius: 1.6rem;
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .close {
+      padding: 1rem;
+      width: fit-content;
+      margin-left: auto;
+      cursor: pointer;
+
+      > img {
+        width: 1.4rem;
+      }
+    }
+
+    & form {
+      margin-top: 2rem;
+
+      .input-field {
+        margin-top: 1.6rem;
+        font-size: 1.4rem;
+
+        &:nth-of-type(1) {
+          margin-top: unset;
+        }
+
+        & label {
+          color: var(--text-primary);
+          font-weight: bold;
+        }
+
+        & input {
+          background-color: var(--bg-gray);
+          display: block;
+          border: none;
+          margin-top: 0.5rem;
+          width: 100%;
+          padding: 1.4rem 2rem;
+          border-radius: 1.6rem;
+
+          &::placeholder {
+            color: var(--text-light);
+          }
+
+          &:focus {
+            outline: 2px solid var(--text-primary);
+          }
+        }
+      }
+
+      & button {
+        background-color: var(--text-primary);
+        color: #fff;
+        outline: none;
+        border: none;
+        padding: 1.4rem 3rem;
+        margin: 3rem 0 2rem 0;
+        right: 0;
+        border-radius: 1.6rem;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+}
