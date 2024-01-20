@@ -69,10 +69,10 @@ courseForm.addEventListener("submit", (e) => {
   const grade = data.get("grade").toLocaleUpperCase();
 
   courseList.innerHTML += `
-  <div class="course-row">
-            <span>${courseCode}</span>
-            <span>${creditUnit}</span>
-            <span>${grade}</span>
+  <div class="row">
+            <span class="courseCode">${courseCode}</span>
+            <span class="creditUnit">${creditUnit}</span>
+            <span class="grade">${grade}</span>
           </div>
   `;
 

@@ -7,9 +7,6 @@
 }
 
 html {
-  --text-light: #b9c8da;
-  --text-primary: #192e59;
-  --bg-gray: #e5eaf7;
   font-family: Inter;
   font-size: 10px;
 }
@@ -33,13 +30,13 @@ header {
 
 .page-title {
   text-align: center;
-  color: var(--text-primary);
+  color: #192e59;
   font-size: 3.6rem;
   margin-top: 3rem;
 }
 
 .plan {
-  background-color: var(--bg-gray);
+  background-color: #e5eaf7;
   width: fit-content;
   font-size: 1.8rem;
   padding: 1rem 7rem;
@@ -53,59 +50,48 @@ header {
 }
 
 .courses {
-  margin: 0 auto;
+  margin: 6rem auto 0;
   width: min(100%, 600px);
+}
 
-  .emptyState {
-    > img {
-      display: block;
-      margin: 6rem auto 2rem;
-    }
+.emptyState img {
+  display: block;
+  margin: 6rem auto 2rem;
+}
 
-    > p {
-      text-align: center;
-      font-size: 1.6rem;
-      color: var(--text-light);
-    }
-  }
+.emptyState p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #b9c8da;
+}
 
-  .courseList {
-    margin-top: 6rem;
-    display: none;
+.courseList {
+  display: none;
+}
 
-    .heading {
-      background: unset;
+.courseList .row {
+  display: flex;
+  width: 100%;
+  background-color: #e5eaf7;
+  padding: 2rem 2rem;
+  border-radius: 1.6rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
 
-      & span {
-        color: var(--text-light);
-      }
-    }
-  }
+.courseCode,
+.creditUnit {
+  width: 45%;
+}
 
-  .course-row,
-  .heading {
-    display: flex;
-    width: 100%;
-    background-color: var(--bg-gray);
-    padding: 2rem 2rem;
-    border-radius: 1.6rem;
-    font-size: 1.2rem;
-    margin-top: 2rem;
-    font-weight: bold;
+.courseList .row:nth-of-type(2) {
+  margin-top: unset;
+}
 
-    > span:nth-of-type(1),
-    > span:nth-of-type(2) {
-      width: 45%;
-    }
-
-    > span:nth-of-type(3) {
-      width: 10%;
-    }
-
-    &:nth-of-type(2) {
-      margin-top: unset;
-    }
-  }
+.courseList .heading {
+  background: unset;
+  color: #b9c8da;
 }
 
 .addCourseBtn {
@@ -118,10 +104,10 @@ header {
   align-items: center;
   font-size: 1.6rem;
   border-radius: 2rem;
+}
 
-  > img {
-    width: 1.6rem;
-  }
+.addCourseBtn img {
+  width: 1.6rem;
 }
 
 .calculateGPABtn {
@@ -131,10 +117,10 @@ header {
   padding: 1.4rem 3rem;
   font-size: 1.6rem;
   border-radius: 2rem;
+}
 
-  &:disabled {
-    background-color: #d8efe0;
-  }
+.calculateGPABtn:disabled {
+  background-color: #d8efe0;
 }
 
 .actionButtons {
@@ -144,10 +130,6 @@ header {
   gap: 2rem;
   margin: 5rem auto;
   width: fit-content;
-
-  @media screen and (min-width: 425px) {
-    flex-direction: row;
-  }
 }
 
 .backdrop {
@@ -162,81 +144,87 @@ header {
   padding: 1rem;
   visibility: hidden;
   pointer-events: none;
+}
 
-  .modal {
-    background-color: #ffffff;
-    width: min(100%, 400px);
-    padding: 2rem;
-    border-radius: 1.6rem;
+.modal {
+  background-color: #ffffff;
+  width: min(100%, 400px);
+  padding: 2rem;
+  border-radius: 1.6rem;
+}
 
-    .modal-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-      & h2 {
-        font-size: 2rem;
-      }
-    }
+.modal .modal-header h2 {
+  font-size: 2rem;
+}
 
-    .close {
-      padding: 1rem;
-      width: fit-content;
-      margin-left: auto;
-      cursor: pointer;
+.modal .close {
+  padding: 1rem;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+}
 
-      > img {
-        width: 1.4rem;
-      }
-    }
+.modal .close img {
+  width: 1.4rem;
+}
 
-    & form {
-      margin-top: 2rem;
+.modal form {
+  margin-top: 2rem;
+}
 
-      .input-field {
-        margin-top: 1.6rem;
-        font-size: 1.4rem;
+.modal form .input-field {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
 
-        &:nth-of-type(1) {
-          margin-top: unset;
-        }
+.modal form .input-field:nth-of-type(1) {
+  margin-top: unset;
+}
 
-        & label {
-          color: var(--text-primary);
-          font-weight: bold;
-        }
+.modal form .input-field label {
+  color: #192e59;
+  font-weight: bold;
+}
 
-        & input {
-          background-color: var(--bg-gray);
-          display: block;
-          border: none;
-          margin-top: 0.5rem;
-          width: 100%;
-          padding: 1.4rem 2rem;
-          border-radius: 1.6rem;
+.modal form .input-field input {
+  background-color: #e5eaf7;
+  display: block;
+  border: none;
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 1.4rem 2rem;
+  border-radius: 1.6rem;
+}
 
-          &::placeholder {
-            color: var(--text-light);
-          }
+.modal form .input-field input::placeholder {
+  color: #b9c8da;
+}
 
-          &:focus {
-            outline: 2px solid var(--text-primary);
-          }
-        }
-      }
+.modal form .input-field input:focus {
+  outline: 2px solid #192e59;
+}
 
-      & button {
-        background-color: var(--text-primary);
-        color: #fff;
-        outline: none;
-        border: none;
-        padding: 1.4rem 3rem;
-        margin: 3rem 0 2rem 0;
-        right: 0;
-        border-radius: 1.6rem;
-        width: 100%;
-        cursor: pointer;
-      }
-    }
+.modal form button {
+  background-color: #192e59;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 1.4rem 3rem;
+  margin: 3rem 0 2rem 0;
+  right: 0;
+  border-radius: 1.6rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 425px) {
+  .actionButtons {
+    flex-direction: row;
   }
 }
