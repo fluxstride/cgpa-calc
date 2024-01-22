@@ -68,17 +68,22 @@
         <form name="courseForm">
           <div class="input-field">
             <label for="courseCode"> Course Code </label>
-            <input type="text" placeholder="GST 211" name="courseCode" />
+            <input
+              type="text"
+              placeholder="GST 211"
+              name="courseCode"
+              required
+            />
           </div>
 
           <div class="input-field">
             <label for="creditUnit"> Credit Unit </label>
-            <input type="number" placeholder="3" name="creditUnit" />
+            <input type="number" placeholder="3" name="creditUnit" required />
           </div>
 
           <div class="input-field">
             <label for="grade"> Grade </label>
-            <input type="text" placeholder="A" name="grade" />
+            <input type="text" placeholder="A" name="grade" required />
           </div>
 
           <button type="submit">Add Course</button>
