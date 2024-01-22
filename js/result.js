@@ -4,10 +4,10 @@ const restartButton = document.querySelector(".restart");
 
 const gpa = localStorage.getItem("GPA");
 
-const goBack = () => (window.location = "/");
+const goBack = () => history.back();
 
 if (!gpa) {
-  goBack();
+  history.back();
 }
 
 let gpaClass = "";
