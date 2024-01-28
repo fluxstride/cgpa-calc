@@ -13,76 +13,37 @@
     <body>
         <main class="wrapper">
             <!-- hamburger : only visible on screensizes <= 780px -->
-            <button
-                class="hamburger"
-                type="button"
-                data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasWithBothOptions"
-                aria-controls="offcanvasWithBothOptions"
-            >
-                <img src="img/svg/hamburger.svg" />
-            </button>
+            <img src="img/svg/hamburger.svg" />
 
             <!-- ############  ########### -->
-            <div
-                class="offcanvas offcanvas-start"
-                data-bs-scroll="true"
-                tabindex="-1"
-                id="offcanvasWithBothOptions"
-                aria-labelledby="offcanvasWithBothOptionsLabel"
-            >
-                <div class="offcanvas-header">
-                    <h5
-                        class="offcanvas-title fw-bolder fonte"
-                        id="offcanvasWithBothOptionsLabel"
-                    >
-                        GPA CALC-MENU
-                    </h5>
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="offcanvas"
-                        aria-label="Close"
-                    ></button>
-                </div>
-                <div class="offcanvas-body fonte">
-                    <p>
-                        welcome to Gpa calculator, please do well to share to
-                        your friends.
-                    </p>
+            <h5>GPA CALC-MENU</h5>
+            <div class="offcanvas-body fonte">
+                <p>
+                    welcome to Gpa calculator, please do well to share to your
+                    friends.
+                </p>
 
-                    <ul class="list-group fonte">
-                        <li
-                            class="list-group-item list-group-item-success jist"
-                        >
-                            <a href="">ABOUT</a>
-                        </li>
-                        <li class="list-group-item jist">
-                            <a href="">THE TEAM</a>
-                        </li>
-                        <li
-                            class="list-group-item list-group-item-success jist"
-                        >
-                            <a href="">HELP</a>
-                        </li>
-                        <li class="list-group-item jist">
-                            <a href="">JOIN_US</a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="list-group fonte">
+                    <li class="list-group-item list-group-item-success jist">
+                        <a href="">ABOUT</a>
+                    </li>
+                    <li class="list-group-item jist">
+                        <a href="">THE TEAM</a>
+                    </li>
+                    <li class="list-group-item list-group-item-success jist">
+                        <a href="">HELP</a>
+                    </li>
+                    <li class="list-group-item jist">
+                        <a href="">JOIN_US</a>
+                    </li>
+                </ul>
             </div>
             <!-- ############  ########### -->
 
             <section class="first-sec">
                 <h1 class="gpa-calculator">GPA Calculator</h1>
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal"
-                >
-                    <div class="plan mt-5">Plan</div>
-                </button>
+                <div class="plan mt-5">Plan</div>
+
                 <!--Green pointer-->
                 <img
                     src="img/svg/green-pointer.svg"
@@ -101,98 +62,14 @@
             <img src="img/svg/stack.svg" />
 
             <!--Add-->
-            <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#hotModal"
-            >
-                <img src="img/svg/add.svg" />
-            </button>
+
+            <img src="img/svg/add.svg" />
 
             <!-- Calculate -->
-            <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#calcModal"
-            >
-                <div class="calculate">Calculate</div>
-            </button>
+
+            <div class="calculate">Calculate</div>
 
             <!-- Modal -->
-            <div
-                class="modal fade plan-btn"
-                id="calcModal"
-                tabindex="-1"
-                aria-labelledby="calcModalLabel"
-                aria-hidden="true"
-            >
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1
-                                class="modal-title fs-5 fw-bold fonte"
-                                id="calcModalLabel"
-                            >
-                                Thanks for participating
-                            </h1>
-                        </div>
-                        <div class="modal-body fonte">
-                            We'll be back with you in a moment
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Modal -->
-            <div
-                class="modal fade plan-btn"
-                id="hotModal"
-                tabindex="-1"
-                aria-labelledby="hotModalLabel"
-                aria-hidden="true"
-            >
-                <div class="modal-dialog modal-dialog-scrollable">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1
-                                class="modal-title fs-5 fw-bold fonte"
-                                id="hotModalLabel"
-                            >
-                                Input course info here
-                            </h1>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body fonte">
-                            Sadly not available at the moment please do be
-                            patient with us till the next update. Lorem ipsum
-                            dolor sit amet consectetur adipisicing elit. Nam
-                            enim nobis eaque sunt, commodi illo culpa
-                            reprehenderit repellat in ipsa maiores optio, sit
-                            est cumque, hic possimus. Recusandae, dicta animi.
-                        </div>
-                        <div class="modal-footer">
-                            <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-bs-dismiss="modal"
-                            >
-                                Close
-                            </button>
-                            <button type="button" class="btn btn-primary">
-                                Save changes
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- Modal -->
             <div
@@ -205,12 +82,7 @@
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1
-                                class="modal-title fs-5 fw-bold fonte"
-                                id="exampleModalLabel"
-                            >
-                                HI
-                            </h1>
+                            <h1>HI</h1>
                         </div>
                         <div class="modal-body fonte">
                             To get started click on the plus(+) sign to input
@@ -219,9 +91,7 @@
                     </div>
                 </div>
             </div>
-
         </main>
 
-        <script src="js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
