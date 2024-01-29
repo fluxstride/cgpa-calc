@@ -1,0 +1,106 @@
+/* THERE'S ALL THIS CUSTOM PROPERTIES THAT AREN'T DECLARED IN THIS FILE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 2px solid hotpink;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: calc(1em + .5vw);
+    text-align: center;
+    max-width: 100vw;
+}
+
+main > *:not(img) {
+    /* outline: 2px solid hotpink; */
+    width: min(90vw, 1000px);
+    margin: auto;
+}
+
+.bar {
+    width: 40px;
+    height: 5px;
+    margin: 3px auto;
+    transition: .3s ease-in-out;
+    background-color: grey;
+}
+
+.hamburger {
+    width: fit-content;
+    padding-left: .5em;
+}
+
+.hamburger, .bar {
+    display: block;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(50deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-50deg);
+}
+
+.nav-menu {
+    width: 75vw;
+    height: 60vh;
+    display: none;
+    text-align: center;
+    position: absolute;
+    z-index: -10;
+    inset-block-start: 0;
+    inset-inline-end: -100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color: var(--light_primary);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.nav-menu.active {
+    display: flex;
+    inset-block-start: 74px;
+    inset-inline-end: 0;
+    z-index: -100;
+}
+
+.nav-link, .nav-item {
+    list-style: none;
+    text-decoration: none;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .5s ease;
+}
+
+.nav-link:is(:hover, :active) {
+    color: var(--diff);
+    font-size: 1.2em;
+}
+
+
+
+.first-sec {
+    background: url('../img/svg/first.svg');
+    padding: 1em;
+}
+
+
+@media(width >= 780px) {
+    .hamburger {
+        display: none;
+    }
+
+    .list-group li a{
+        display: block !important;
+    }
+}

@@ -5,44 +5,52 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="author" content="GDSC IUO" />
         <meta name="description" content="students gpa calculator" />
-        <link rel="stylesheet" href="css/calculate.css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
         <title>GPA CALCULATOR</title>
     </head>
 
     <body>
         <main class="wrapper">
-            <!-- hamburger : only visible on screensizes <= 780px -->
-            <img src="img/svg/hamburger.svg" />
-
-            <!-- ############  ########### -->
-            <h5>GPA CALC-MENU</h5>
-            <div class="offcanvas-body fonte">
+            <!-- HAMBURGER : ONLY VISIBLE ON SCREENSIZES <= 780px -->
+            <!-- <img class="ham-menu" src="img/svg/hamburger.svg"/>
+            <div class="ham-menucontent">
                 <p>
-                    welcome to Gpa calculator, please do well to share to your
+                    Welcome to GPA calculator, please do well to share with your
                     friends.
                 </p>
 
-                <ul class="list-group fonte">
-                    <li class="list-group-item list-group-item-success jist">
-                        <a href="">ABOUT</a>
-                    </li>
-                    <li class="list-group-item jist">
-                        <a href="">THE TEAM</a>
-                    </li>
-                    <li class="list-group-item list-group-item-success jist">
-                        <a href="">HELP</a>
-                    </li>
-                    <li class="list-group-item jist">
-                        <a href="">JOIN_US</a>
-                    </li>
+                <ul>
+                    <li> <a href=""> ABOUT </a> </li>
+                    <li> <a href=""> THE TEAM </a> </li>
+                    <li> <a href=""> HELP </a> </li>
+                    <li> <a href=""> JOIN US </a> </li>
                 </ul>
-            </div>
+            </div> -->
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#about" class="nav-link"> about us</a></li>
+                    <li class="nav-item"><a href="#mission" class="nav-link"> mission</a></li>
+                    <li class="nav-item"><a href="#services" class="nav-link"> services</a></li>
+                </ul>
+
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            <!-- ############ HAMBURGER ########### -->
+
+
+            <!-- ############  ########### -->
+            <h5>GPA CALC-MENU</h5>
+
+            
             <!-- ############  ########### -->
 
             <section class="first-sec">
                 <h1 class="gpa-calculator">GPA Calculator</h1>
-                <div class="plan mt-5">Plan</div>
+                <button>Plan</button>
 
                 <!--Green pointer-->
                 <img
@@ -92,6 +100,6 @@
                 </div>
             </div>
         </main>
-
+        <script src="/js/script.js"></script>
     </body>
 </html>
