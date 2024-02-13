@@ -32,7 +32,7 @@ header {
   text-align: center;
   color: #192e59;
   font-size: 3.6rem;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .plan {
@@ -98,12 +98,13 @@ header {
   background-color: #ebb03e;
   border: none;
   color: #ffff;
-  padding: 1.4rem 3rem;
+  padding: 2rem;
   display: flex;
   gap: 1rem;
   align-items: center;
   font-size: 1.6rem;
-  border-radius: 2rem;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 .addCourseBtn img {
@@ -114,9 +115,12 @@ header {
   background-color: #3db165;
   border: none;
   color: #ffff;
-  padding: 1.4rem 3rem;
+  padding: 1.8rem 0;
   font-size: 1.6rem;
-  border-radius: 2rem;
+  border-radius: 3rem;
+  display: block;
+  width: min(100%, 700px);
+  margin: 3rem auto 0;
 }
 
 .calculateGPABtn:disabled {
@@ -124,12 +128,7 @@ header {
 }
 
 .actionButtons {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 2rem;
   margin: 5rem auto;
-  width: fit-content;
 }
 
 .backdrop {
@@ -223,9 +222,22 @@ header {
   cursor: pointer;
 }
 
-@media screen and (min-width: 425px) {
-  .actionButtons {
-    flex-direction: row;
+@media screen and (min-width: 1024px) {
+  .emptyState img {
+    width: 20rem;
+  }
+
+  .emptyState p {
+    font-size: 2rem;
+  }
+
+  .addCourseBtn {
+    padding: 3rem;
+  }
+
+  .calculateGPABtn {
+    padding: 2.3rem 0;
+    font-size: 2.2rem;
   }
 }
 
@@ -239,7 +251,7 @@ header {
 .gpa {
   width: min(80%, 200px);
   aspect-ratio: 1;
-  background: conic-gradient(#192e59 70%, transparent 0);
+  background: conic-gradient(#192e59 var(--gpa-percent), transparent 0);
   border-radius: 50%;
   margin: 4rem auto 2rem;
   position: relative;

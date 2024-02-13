@@ -23,6 +23,7 @@ if (gpa >= 4.5) {
 }
 
 gpaText.setAttribute("data-gpa", gpa);
+gpaText.setAttribute("style", "--gpa-percent: " + (gpa / 5) * 100 + "%");
 gpaClassText.innerHTML = gpaClass;
 
 restartButton.addEventListener("click", goBack);
