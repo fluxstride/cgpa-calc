@@ -1,0 +1,302 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Inter;
+  font-size: 10px;
+}
+
+img {
+  pointer-events: none;
+}
+
+main {
+  padding-inline: 1.2rem;
+}
+
+header {
+  background-image: url("../img/background.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: min(100%, 400px);
+  margin: 0 auto;
+}
+
+.page-title {
+  text-align: center;
+  color: #192e59;
+  font-size: 3.6rem;
+  margin-top: 4rem;
+}
+
+.plan {
+  background-color: #e5eaf7;
+  width: fit-content;
+  font-size: 1.8rem;
+  padding: 1rem 7rem;
+  border-radius: 10rem;
+  margin: 1.6rem auto;
+}
+
+.mth-412 {
+  width: fit-content;
+  margin-left: auto;
+}
+
+.courses {
+  margin: 6rem auto 0;
+  width: min(100%, 600px);
+}
+
+.emptyState img {
+  display: block;
+  margin: 6rem auto 2rem;
+}
+
+.emptyState p {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #b9c8da;
+}
+
+.courseList {
+  display: none;
+}
+
+.courseList .row {
+  display: flex;
+  width: 100%;
+  background-color: #e5eaf7;
+  padding: 2rem 2rem;
+  border-radius: 1.6rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.courseCode,
+.creditUnit {
+  width: 45%;
+}
+
+.courseList .row:nth-of-type(2) {
+  margin-top: unset;
+}
+
+.courseList .heading {
+  background: unset;
+  color: #b9c8da;
+}
+
+.addCourseBtn {
+  background-color: #ebb03e;
+  border: none;
+  color: #ffff;
+  padding: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.6rem;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.addCourseBtn img {
+  width: 1.6rem;
+}
+
+.calculateGPABtn {
+  background-color: #3db165;
+  border: none;
+  color: #ffff;
+  padding: 1.8rem 0;
+  font-size: 1.6rem;
+  border-radius: 3rem;
+  display: block;
+  width: min(100%, 700px);
+  margin: 3rem auto 0;
+}
+
+.calculateGPABtn:disabled {
+  background-color: #d8efe0;
+}
+
+.actionButtons {
+  margin: 5rem auto;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  background-color: #ffffff;
+  width: min(100%, 400px);
+  padding: 2rem;
+  border-radius: 1.6rem;
+}
+
+.modal .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal .modal-header h2 {
+  font-size: 2rem;
+}
+
+.modal .close {
+  padding: 1rem;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.modal .close img {
+  width: 1.4rem;
+}
+
+.modal form {
+  margin-top: 2rem;
+}
+
+.modal form .input-field {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+}
+
+.modal form .input-field:nth-of-type(1) {
+  margin-top: unset;
+}
+
+.modal form .input-field label {
+  color: #192e59;
+  font-weight: bold;
+}
+
+.modal form .input-field input {
+  background-color: #e5eaf7;
+  display: block;
+  border: none;
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 1.4rem 2rem;
+  border-radius: 1.6rem;
+}
+
+.modal form .input-field input::placeholder {
+  color: #b9c8da;
+}
+
+.modal form .input-field input:focus {
+  outline: 2px solid #192e59;
+}
+
+.modal form button {
+  background-color: #192e59;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 1.4rem 3rem;
+  margin: 3rem 0 2rem 0;
+  right: 0;
+  border-radius: 1.6rem;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1024px) {
+  .emptyState img {
+    width: 20rem;
+  }
+
+  .emptyState p {
+    font-size: 2rem;
+  }
+
+  .addCourseBtn {
+    padding: 3rem;
+  }
+
+  .calculateGPABtn {
+    padding: 2.3rem 0;
+    font-size: 2.2rem;
+  }
+}
+
+.resultTitle {
+  text-align: center;
+  font-size: 2rem;
+  color: #192e59;
+  margin-top: 4rem;
+}
+
+.gpa {
+  width: min(80%, 200px);
+  aspect-ratio: 1;
+  background: conic-gradient(#192e59 var(--gpa-percent), transparent 0);
+  border-radius: 50%;
+  margin: 4rem auto 2rem;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.gpa::before {
+  content: "";
+  background-color: #f1f5fb;
+  width: 95%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.gpa::after {
+  content: attr(data-gpa);
+  color: #192e59;
+  position: absolute;
+  z-index: 30;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.gpaClass {
+  color: #3db165;
+  background-color: #d8efe0;
+  padding: 1rem 4rem;
+  border-radius: 2rem;
+  font-size: 1.6rem;
+  width: fit-content;
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.restart {
+  background: #3db165;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  width: min(80%, 400px);
+  display: block;
+  margin: 8em auto;
+  padding: 2rem;
+  color: #fff;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+}
