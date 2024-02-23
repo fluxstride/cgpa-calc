@@ -54,6 +54,11 @@ const closeCourseModal = () => {
 
 let courses = [];
 
+const clearCourseList = () => {
+  courseList.innerHTML = "";
+  emptyState.style.display = "block";
+};
+
 courseForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -96,6 +101,7 @@ backdrop.addEventListener("click", closeModal);
 closeButton.addEventListener("click", closeModal);
 
 const calculateGPA = () => {
+  clearCourseList();
   const cgpa = calculateCGPA(courses);
   localStorage.setItem("GPA", cgpa);
   window.location = "result.html";
