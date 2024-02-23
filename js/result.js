@@ -7,7 +7,7 @@ const gpa = localStorage.getItem("GPA");
 const goBack = () => history.back();
 
 if (!gpa) {
-  history.back();
+  goBack();
 }
 
 const gpaClassLookupMap = new Map([
