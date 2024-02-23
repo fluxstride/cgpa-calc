@@ -10,17 +10,22 @@ if (!gpa) {
   history.back();
 }
 
-let gpaClass = "";
+const gpaClassLookupMap = new Map([
+  [4.5, "First Class"],
+  [3.5, "2nd Class Upper"],
+  [2.5, "2nd Class Lower"],
+  [0, "3rd Class"],
+]);
 
-if (gpa >= 4.5) {
-  gpaClass = "First Class";
-} else if (gpa >= 3.5) {
-  gpaClass = "2nd Class Upper";
-} else if (gpa >= 2.5) {
-  gpaClass = "2nd Class Lower";
-} else {
-  gpaClass = "3rd Class Lower";
-}
+const convertGpaToClass = (gpa) => {
+  for (let [key, value] of gpaClassLookupMap) {
+    if (gpa >= parseFloat(key)) {
+      return value;
+    }
+  }
+};
+
+const gpaClass = convertGpaToClass(gpa);
 
 gpaText.setAttribute("data-gpa", gpa);
 gpaText.setAttribute("style", "--gpa-percent: " + (gpa / 5) * 100 + "%");
