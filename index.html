@@ -6,6 +6,7 @@
     <meta name="author" content="GDSC branch IUO, codejunkie-026" />
     <meta name="description" content="" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="aos/aos.css">
     <title>GPA Calculator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,20 +18,20 @@
   <body>
     <main>
       <header>
-        <h1 class="page-title">GPA Calculator</h1>
+        <h1 data-aos="zoom-in" data-aos-delay="500" class="page-title">GPA Calculator</h1>
 
-        <div class="plan">Plan</div>
+        <div data-aos="fade-up" data-aos-delay="400" class="plan">Plan</div>
 
-        <div class="mth-412">
+        <div data-aos="fade-right"  data-aos-delay="700" class="mth-412">
           <img src="./img/mth-412.svg" alt="MTH 412" />
         </div>
 
-        <div class="eps-312">
+        <div data-aos="fade-left" data-aos-delay="800" class="eps-312">
           <img src="./img/eps-312.svg" alt="" />
         </div>
       </header>
 
-      <div class="courses">
+      <div data-aos="zoom-out" data-aos-delay="900" class="courses">
         <div class="emptyState">
           <img src="./img/empty-state.svg" alt="empty list" />
           <p>No course to display</p>
@@ -46,11 +47,11 @@
       </div>
 
       <div class="actionButtons">
-        <button class="addCourseBtn">
+        <button data-aos="fade-left" data-aos-delay="1000" class="addCourseBtn">
           <img src="./img/add.svg" alt="" />
         </button>
 
-        <button class="calculateGPABtn" disabled>Calculate</button>
+        <button data-aos="fade-right" data-aos-delay="1100" class="calculateGPABtn" disabled>Calculate</button>
       </div>
     </main>
 
